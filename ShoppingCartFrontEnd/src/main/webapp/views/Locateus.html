@@ -1,0 +1,13 @@
+ <html> <!-- Map -->
+   <style>
+   body{
+   	background-image:url(file:///C:/Users/admin/Desktop/mapback.jpg);
+   	backgorund-size: stretch;
+   }
+   </style>
+   <body>
+    <section id="contact" class="map">
+        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:500px;width:1350px;'><div id='gmap_canvas' style='height:500px;width:1350px;'></div><div><small><a href="http://embedgooglemaps.com">embed google maps </a></small></div><div><small><a href="https://termsofusegenerator.net">terms of use generator</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:13,center:new google.maps.LatLng(12.9715987,77.59456269999998),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(12.9715987,77.59456269999998)});infowindow = new google.maps.InfoWindow({content:'<strong>LOCATE US!</strong><br>Bangalore, JAYANAGAR 3rd block,NIIT IMPERIA<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+    </section>
+    </body>
+    </html>
