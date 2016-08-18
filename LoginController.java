@@ -1,56 +1,66 @@
-package com.niit.shoppingcart.controller;
+package com.niit.loginpage;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import java.io.IOException;
+import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
+/**
+ * Servlet implementation class LoginController
+ */
+@WebServlet("/LoginController")
+public class LoginController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public LoginController() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
 
-
-@Controller
-public class LoginController {
-@RequestMapping("/login")
-	public String getpage()
-	{
-		return"login";
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-@RequestMapping("/logo")
-public String getlogopage()
-{
-	return"logo";
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+		
+		String userid =	request.getParameter("userid");
+		String password =	request.getParameter("password");
+		
+		LoginDAO loginDAO = new LoginDAO();
+		RequestDispatcher dispatcher;
+		
+		if(userid.equals("veena") &&  password.equals("naveena"))
+		{
+			dispatcher = request.getRequestDispatcher("Next.jsp");
+			dispatcher.forward(request, response);
+		}
+		else
+		{
+			dispatcher = request.getRequestDispatcher("Login.html");
+		    PrintWriter writer = response.getWriter();
+		    writer.append("<h4>Invalid credentials....</h4>");
+			dispatcher.include(request, response);
+		}
+	}
+	
 }
+	
 
-@Controller
-public class MyChaitanyaController {
-@RequestMapping("/mychaitanya")
-	public String getpage()
-	{
-		return"mychaitanya";
-	}
-@Controller
-public class OurController {
-@RequestMapping("/ourcollection")
-	public String getpage()
-	{
-		return"ourcollection";
-	}
-@Controller
-public class ContactController {
-@RequestMapping("/contact")
-	public String getpage()
-	{
-		return"contact";
-	}
 
-@Controller
-public class CartController {
-@RequestMapping("/cart")
-	public String getpage()
-	{
-		return"cart";
-	}
-}
-}
-}
-}
-}
