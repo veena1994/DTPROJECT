@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.niit.shoppingcart.model.Category;
 import com.niit.shoppingcart.model.Product;
 
 
@@ -27,20 +28,35 @@ public class ProductDAOImpl  implements ProductDAO{
 	this.sessionFactory=sessionFactory;
 	}
 
+	  @Transactional
+	     public List<Product> list(){
+	     @SuppressWarnings("unchecked")
+	     List<Product> listProduct=(List<Product>)sessionFactory.getCurrentSession()
+	     .createCriteria(Product.class).setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
+	     return listProduct;
+	     }
 
+	  
+	  @Transactional
+		public void saveorUpdate(Product product) {
+			sessionFactory.getCurrentSession().saveOrUpdate(product);
+			}
+				
 	
 	@Transactional
 	public void delete(String id)
 	{
-		Product product = new Product();
-	product.setId(id);
-	sessionFactory.getCurrentSession().delete(product);
+		Product ProductToDelete = new Product();
+		ProductToDelete.setId(id);
+	sessionFactory.getCurrentSession().delete(ProductToDelete);
 	}
 
 	@Transactional
 	public Product get(String id){
-		String hql="from category where id="+"'"+id+"'";
+		String hql = "from Product where id=" +"'"+ id +"'";
 		Query query=(Query)sessionFactory.getCurrentSession().createQuery(hql);
+		System.out.println("Inside productDAO get");
+		@SuppressWarnings("unchecked")
 		List<Product> listProduct=(List<Product>)query.list();
 
 		if(listProduct != null && !listProduct.isEmpty()){
@@ -48,19 +64,9 @@ public class ProductDAOImpl  implements ProductDAO{
 		}
 		return null;
 		}
-     @Transactional
-     public List<Product> list(){
-     @SuppressWarnings("unchecked")
-     List<Product> listProduct=(List<Product>)sessionFactory.getCurrentSession().createCriteria(Product.class).setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
-     return listProduct;
-     }
 
 
-@Transactional
-	public void saveorUpdate(Product product) {
-		sessionFactory.getCurrentSession().saveOrUpdate(product);
-		}
-			
+
 	
 }
 

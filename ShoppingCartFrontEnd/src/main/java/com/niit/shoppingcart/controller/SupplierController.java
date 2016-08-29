@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 
 import com.niit.shoppingcart.dao.SupplierDAO;
 import com.niit.shoppingcart.model.Supplier;
@@ -28,6 +28,7 @@ private SupplierDAO supplierDAO;
 	
 	@RequestMapping(value = "/suppliers", method = RequestMethod.GET)
 	public String listSuppliers(Model model) {
+		System.out.println("hello guys");
 		model.addAttribute("supplier", new Supplier());
 		model.addAttribute("supplierList", this.supplierDAO.list());
 		return "supplier";
@@ -36,7 +37,7 @@ private SupplierDAO supplierDAO;
 	//For add and update supplier both
 	@RequestMapping(value= "/supplier/add", method = RequestMethod.POST)
 	public String addSupplier(@ModelAttribute("supplier") Supplier supplier){
-		
+		System.out.println("guys");
 	
 			supplierDAO.saveorUpdate(supplier);
 		
@@ -46,7 +47,7 @@ private SupplierDAO supplierDAO;
 	
 	@RequestMapping("supplier/remove/{id}")
     public String removeSupplier(@PathVariable("id") String id,ModelMap model) throws Exception{
-		
+		System.out.println("hi...");
        try {
 		supplierDAO.delete(id);
 		model.addAttribute("message","Successfully Added");
@@ -60,9 +61,17 @@ private SupplierDAO supplierDAO;
  
     @RequestMapping("supplier/edit/{id}")
     public String editSupplier(@PathVariable("id") String id, Model model){
+    	System.out.println("welcome");
     	System.out.println("editSupplier");
+    	try{
+    		System.out.println(" hiiis");
         model.addAttribute("supplier", this.supplierDAO.get(id));
         model.addAttribute("listSuppliers", this.supplierDAO.list());
+    	}
+    	catch(Exception e)
+    	{
+    		e.printStackTrace();
+    	}
         return "supplier";
     }
 	}

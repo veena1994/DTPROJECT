@@ -1,33 +1,48 @@
-package com.niit.shoppingcart.util;
+/*package com.niit.shoppingcart.util;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+import javax.print.DocFlavor.INPUT_STREAM;
 
 public class Util {
 
-	/**
-	 * This method is used to remove cammaa from
-	 * product, category, suppliers which are 
-	 * appending unnecessarily while creating it.
-	 * 
-	 * @param st
-	 * @param ch1
-	 * @param ch2
-	 * @return
-	 */
-	public String replace(String st, String ch1, String ch2)
-	{
-		
-	  return	st.replace(ch1, ch2);
-		
-	}
-	
-	
-	public static void main(String[] args) {
-		Util u = new Util();
-		
-		String newString =   u.replace(",PRD", ",", "");
-		System.out.println(newString);
-	}
-	
 
+	public static void upload(String path, MultipartFile file,String fileName){
+		if(!file.isEmpty()){
+			InputStream inputStream =null;
+			OutputStream outputStream =null;
+			if(file.getSize() > 0)
+			{
+				try{
+					inputStream = file.getInputStream();
+					outputStream = new FileOutputStream(path+fileName);
+					int readBytes  = 0;
+					byte[] buffer = new byte[1024];
+					while((readBytes = inputStream.read(buffer,0,1024))!= -1){
+						outputStream.write(buffer, 0, readBytes);
+					}
+				}catch(IOException e){
+					//TODO auto generated catch block
+					e.printStackTrace();
+				}
+				finally
+				{
+					try{
+						outputStream.close();
+						inputStream.close();
+						
+					}catch(IOException e){
+						//TODO auto generated catch block
+						e.printStackTrace();
+					}
+				}
+				
+		}
+		
+	}
+	}
 }
-
-
+*/

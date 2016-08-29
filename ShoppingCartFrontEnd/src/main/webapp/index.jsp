@@ -1,5 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ page session="false"%>
+<link rel="stylesheet"  href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<html>
 <head>
 <title>Bootstrap Example</title>
 <meta charset="utf-8">
@@ -34,35 +40,103 @@ footer {
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="logo.jsp">LOGO</a>
+				<a class="navbar-brand" href="logo">LOGO</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="index.jsp">HOME</a></li>
-					<li><a href="mychaitanya.jsp">CHAITANYA</a></li>
-					<li><a href="ourcollection.jsp">OUR COLLECTIONS</a></li>
-					<li><a href="contact.html">CONTACT US</a></li>
-					<li><a href="Locateus.html">LOCATE US</a></li>
+					<li class="active"><a href="index.jsp"> <span class="glyphicon glyphicon-home"></span></a></li>
+					<li><a href="mychaitanya">CHAITANYA</a></li>
+					<li><a href="ourcollection">OUR COLLECTIONS</a></li>
+					<li><a href="contact">CONTACT US</a></li>
 					
-
-				</ul>
+					</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="Register.jsp"><span class="glyphicon glyphicon-user"></span> REGISTER</a></li>
-					<li><a href="login"><span
-							class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
-					<li><a href="cart.jsp"><span
-							class="glyphicon glyphicon-shopping-cart"></span> CART</a></li>
+				
+              <li><a href="register"><span class="glyphicon glyphicon-user"></span> REGISTER</a></li>
+					<li><a href="login"><span 
+					class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
+					
+</ul>
+</div>
+</div>
+</nav>
+	
+	
+	<link rel="stylesheet"  href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>  </title>
+<style type="text/css">
 
 
-				</ul>
-			</div>
-		</div>
-	</nav>
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-color: #ccc;
+}
+
+.tg td {
+ font-family: "Copperplate","Copperplate Gothic Light",fantasy;
+      font-size: 15px;
+  padding: 10px 5px;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  word-break: normal;
+  border-color: #ccc;
+  color: #333;
+  background-color: #fff;
+}
+
+.tg th {
+  font-family: "Copperplate","Copperplate Gothic Light",fantasy;
+      font-size: 15px;
+  font-weight: normal;
+  padding: 10px 5px;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  word-break: normal;
+  border-color: #ccc;
+  color: #333;
+  background-color: #f0f0f0;
+}
+
+.tg .tg-4eph {
+  background-color: #f9f9f9
+}
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+</style>
+</head>
+<%-- <%@include file="Header.jsp" %> 
+ --%> 
+ <body background = "file:///C:\Users\veena1\Desktop\proj\Gold-Jewellery.jpg">
+
+  </body>
 
 	<div class="jumbotron">
 		<div class="container text-center">
+<marquee><font size=10 face=verdana color=blue>CHAITANYA JEWELLERS</font></marquee>
 
-			<h1>CHAITANYA JEWELLARS</h1>
 			<p>GIVES BEAUTY FOR U</p>
 			<div class='w3-container top'>
 				<a class='w3schools-logo' href='#'>ChaitanyaJewellers<span
@@ -71,6 +145,9 @@ footer {
 			</div>
 		</div>
 	</div>
+	
+	
+	
 
 	<!DOCTYPE html>
 <html lang="en">
@@ -165,13 +242,13 @@ footer {
 <div class="container-fluid bg-3 text-center">
 	<div class="jumbotron">
 		<div class="container text-center">
-			<h1 style="background-color: grey">CATEGORY</h1>
+			<h1 style="background-color: orange">ALL CATEGORY</h1>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-sm-3">
 			
-			<img src="C:\Users\veena1\Desktop\proj\6ead8407f8350508.jpg"
+			<img src="C:\Users\veena1\Desktop\proj\6ead8407f8350508 -.jpg"
 				class="img-responsive" style="width: 100%" alt="Image">
 			<div class="panel-footer">
 				<h4>BANGLE</h4>
@@ -186,15 +263,18 @@ footer {
                                     <span class="glyphicon glyphicon-star"></span>
                                 </p>
                             </div>
+                            
+        
+                            
 			</div>
 
 		</div>
 		<div class="col-sm-3">
 			
-			<img src="C:\Users\veena1\Desktop\proj\IMG_3170_zoom.jpg"
+			<img src="C:\Users\veena1\Desktop\proj\04ad9.jpg"
 				class="img-responsive" style="width: 100%" alt="Image">
 			<div class="panel-footer">
-				<h4>NECKSET</h4>
+				<h4>EARRINGS</h4>
 				<h5>Rs.19000/-</h5>
 				 <div class="ratings">
                                 <p class="pull-right">25 reviews</p>
@@ -206,6 +286,7 @@ footer {
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                 </p>
                             </div>
+                            
 			</div>
 
 		</div>
@@ -226,15 +307,16 @@ footer {
                                     <span class="glyphicon glyphicon-star"></span>
                                 </p>
                             </div>
+                            
 			</div>
 
 		</div>
 		<div class="col-sm-3">
 			
-			<img src="C:\Users\veena1\Desktop\proj\font-b-accessories.jpg"
+			<img src="C:\Users\veena1\Desktop\proj\set.jpg"
 				class="img-responsive" style="width: 100%" alt="Image">
 			<div class="panel-footer">
-				<h4>CHAIN</h4>
+				<h4>NECKLESS</h4>
 				<h5>Rs.15000/-</h5>
 				 <div class="ratings">
                                 <p class="pull-right">12 reviews</p>
@@ -246,6 +328,7 @@ footer {
                                     <span class="glyphicon glyphicon-star"></span>
                                 </p>
                             </div>
+                           
 			</div>
 
 		</div>
@@ -273,6 +356,7 @@ footer {
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                 </p>
                             </div>
+                            
 			</div>
 
 		</div>
@@ -293,6 +377,7 @@ footer {
                                     <span class="glyphicon glyphicon-star"></span>
                                 </p>
                             </div>
+                            
 			</div>
 
 		</div>
@@ -313,15 +398,16 @@ footer {
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                 </p>
                             </div>
+                            
 			</div>
 
 		</div>
 		<div class="col-sm-3">
 			
-			<img src="C:\Users\veena1\Desktop\proj\new_brid.JPG" class="img-responsive"
+			<img src="C:\Users\veena1\Desktop\proj\satyam-n-jewellery.jpg" class="img-responsive"
 				style="width: 100%" alt="Image">
 			<div class="panel-footer">
-				<h4>NECKSET</h4>
+				<h4>EARRINGS</h4>
 				<h5>Rs.14000/-</h5>
 				 <div class="ratings">
                                 <p class="pull-right">16 reviews</p>
@@ -333,6 +419,7 @@ footer {
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                 </p>
                             </div>
+                            
 			</div>
 
 		</div>
@@ -360,6 +447,7 @@ footer {
                                     <span class="glyphicon glyphicon-star"></span>
                                 </p>
                             </div>
+                            
 			</div>
 
 		</div>
@@ -380,6 +468,7 @@ footer {
                                     <span class="glyphicon glyphicon-star"></span>
                                 </p>
                             </div>
+                            
 			</div>
 
 		</div>
@@ -400,6 +489,7 @@ footer {
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                 </p>
                             </div>
+                            
 			</div>
 
 		</div>
@@ -420,6 +510,7 @@ footer {
                                     <span class="glyphicon glyphicon-star"></span>
                                 </p>
                             </div>
+                            
 			</div>
 
 		</div>
@@ -433,7 +524,7 @@ footer {
 		<div class="col-sm-3">
 			
 			<img
-				src="C:\Users\veena1\Desktop\proj\b2.jpg"
+				src="C:\Users\veena1\Desktop\proj\bad.jpg"
 				class="img-responsive" style="width: 100%" alt="Image">
 			<div class="panel-footer">
 				<h4>EARRINGS</h4>
@@ -448,6 +539,7 @@ footer {
                                     <span class="glyphicon glyphicon-star-empty"></span>
                                 </p>
                             </div>
+                            
 			</div>
 
 		</div>
@@ -469,6 +561,7 @@ footer {
                                     <span class="glyphicon glyphicon-star"></span>
                                 </p>
                             </div>
+                            
 			</div>
 		
 		</div>
@@ -490,16 +583,17 @@ footer {
                                     <span class="glyphicon glyphicon-star"></span>
                                 </p>
                             </div>
+                            
 			</div>
 
 		</div>
 		<div class="col-sm-3">
 			
 			<img
-				src="C:\Users\veena1\Desktop\proj\b60207f77aa13d4f00b9c9fb581a477e_zoom.jpg"
+				src="C:\Users\veena1\Desktop\proj\73.jpg"
 				class="img-responsive" style="width: 100%" alt="Image">
 			<div class="panel-footer">
-				<h4>NECKSET</h4>
+				<h4>RING</h4>
 				<h5>Rs.20000/-</h5>
 				 <div class="ratings">
                                 <p class="pull-right">16 reviews</p>
@@ -511,6 +605,7 @@ footer {
                                     <span class="glyphicon glyphicon-star"></span>
                                 </p>
                             </div>
+                            
 			</div>
 
 		</div>
@@ -518,6 +613,188 @@ footer {
 </div>
 <br>
 <br>
+<br>
+<br>
+
+<div class="container-fluid bg-3 text-center">
+	<div class="row">
+		<div class="col-sm-3">
+			
+			<img src="C:\Users\veena1\Desktop\proj\ki-SDL487539870-1-2200c.jpg" class="img-responsive"
+				style="width: 100%" alt="Image">
+			<div class="panel-footer">
+				<h4>EARRINGS</h4>
+				<h5>Rs.12000/-</h5>
+				 <div class="ratings">
+                                <p class="pull-right">14 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                            
+			</div>
+
+		</div>
+		<div class="col-sm-3">
+			
+			<img src="C:\Users\veena1\Desktop\proj\GNS-53.jpg" class="img-responsive"
+				style="width: 100%" alt="Image">
+			<div class="panel-footer">
+				<h4>NECKLEES</h4>
+				<h5>Rs.23000/-</h5>
+				 <div class="ratings">
+                                <p class="pull-right">15 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                            
+			</div>
+
+		</div>
+		<div class="col-sm-3">
+			
+			<img src="C:\Users\veena1\Desktop\proj\accessories.jpg" class="img-responsive"
+				style="width: 100%" alt="Image">
+			<div class="panel-footer">
+				<h4>NECKSET</h4>
+				<h5>Rs.18000/-</h5>
+				 <div class="ratings">
+                                <p class="pull-right">10 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                            
+			</div>
+
+		</div>
+		<div class="col-sm-3">
+			
+			<img src="C:\Users\veena1\Desktop\proj\satyam-n-jewellery.jpg" class="img-responsive"
+				style="width: 100%" alt="Image">
+			<div class="panel-footer">
+				<h4>EARRINGS</h4>
+				<h5>Rs.14000/-</h5>
+				 <div class="ratings">
+                                <p class="pull-right">16 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                            
+			</div>
+
+		</div>
+	</div>
+</div>
+<br>
+<br>
+
+<div class="container-fluid bg-3 text-center">
+	<div class="row">
+		<div class="col-sm-3">
+			
+			<img src="C:\Users\veena1\Desktop\proj\8fd.jpg" class="img-responsive"
+				style="width: 100%" alt="Image">
+			<div class="panel-footer">
+				<h4>EARRINGS</h4>
+				<h5>Rs.12000/-</h5>
+				 <div class="ratings">
+                                <p class="pull-right">14 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                            
+			</div>
+
+		</div>
+		<div class="col-sm-3">
+			
+			<img src="C:\Users\veena1\Desktop\proj\1.jpg" class="img-responsive"
+				style="width: 100%" alt="Image">
+			<div class="panel-footer">
+				<h4>NECKLEES</h4>
+				<h5>Rs.23000/-</h5>
+				 <div class="ratings">
+                                <p class="pull-right">15 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                            
+			</div>
+
+		</div>
+		<div class="col-sm-3">
+			
+			<img src="C:\Users\veena1\Desktop\proj\8fd.jpg" class="img-responsive"
+				style="width: 100%" alt="Image">
+			<div class="panel-footer">
+				<h4>NECKSET</h4>
+				<h5>Rs.18000/-</h5>
+				 <div class="ratings">
+                                <p class="pull-right">10 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                           
+			</div>
+
+		</div>
+		<div class="col-sm-3">
+			
+			<img src="C:\Users\veena1\Desktop\proj\temple jewellery 12.jpg" class="img-responsive"
+				style="width: 100%" alt="Image">
+			<div class="panel-footer">
+				<h4>PENDENT</h4>
+				<h5>Rs.14000/-</h5>
+				 <div class="ratings">
+                                <p class="pull-right">16 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                            
+			</div>
+
+		</div>
+	</div>
+</div>
 
 <div style="text-align: center">
 	<iframe width="560" height="315" src="https://youtu.be/VNM56m7l2-4"
@@ -535,7 +812,9 @@ footer {
 </div>
 
 
-
+<h3 style="color:#c19a6b " >SITE MAP</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8708630586125!2d77.54423851398288!3d12.916020419592085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3fcc43072081%3A0x368f796087bcb7ca!2sMagan+Silver+Hill+Apartment%2C+80%2C+3rd+Cross+Rd%2C+Banashankari+3rd+Stage%2C+Chikkalasandra%2C+Bengaluru%2C+Karnataka+560061!5e0!3m2!1sen!2sin!4v1470020673426" width="600" height="450" frameborder="20" style="border:20" allowfullscreen></iframe>
+  </div>
 
 
 
@@ -545,10 +824,18 @@ footer {
 		<div class="custom">
 			<table width="100%" border="0" cellspacing="0" cellpadding="0">
 				<tbody>
-					<tr>
-						<td align="center" width="100%"><b>Copyright © 2003-2016
+							
+					
+					<center><p style="color: #c19a6b">Online Store Copyright:</p></center>  
+					 <tr>
+			           <td align="center" width="100%"><b>Copyright ©2016
 								Chaitanya Jewellers.com.</b><br> <b>All Rights Reserved.</b><br>
 							<b> If you have any Questions don't hesitate to contact us.</b><br>
+							
+							<p><b> contact us :</b>
+        <a href="#"> <span class="glyphicon glyphicon-earphone"></span>+91-8897256086
+        </a>
+      </p><br>
 							<b> Chaitanya India Private
 								Ltd.Jayanagar,500032,Bangalor,India.</b></td>
 					</tr>

@@ -20,12 +20,13 @@ public class UserDetailsTest {
 		
 		UserDetailsDAO userdetailsDAO=(UserDetailsDAO)context.getBean("userdetailsDAO");
 		UserDetails  userdetails = (UserDetails)context.getBean("userDetails");
-		userdetails.setId("12f5");
+		userdetails.setId("666");
 		userdetails.setName("veena");
+		userdetails.setPassword("xyz");
 		userdetails.setAddress("Bangalore");
 		userdetails.setContactNumber("9999999999");
-		userdetails.setMailID("vijaibaskar@yahoo.com");
-userdetailsDAO.saveorUpdate(userdetails);
+		userdetails.setMailID("veena@yahoo.com");
+userdetailsDAO.saveOrUpdate(userdetails);
 		
 		
 	

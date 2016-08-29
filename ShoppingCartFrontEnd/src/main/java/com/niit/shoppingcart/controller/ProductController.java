@@ -45,21 +45,12 @@ public class ProductController {
 	@RequestMapping(value = "/product/add", method = RequestMethod.POST)
 	public String addProduct(@ModelAttribute("product") Product product) {
 		System.out.println(product.getId());
-		System.out.println("veena");
-System.out.println(product.getCategory_id());
-System.out.println(product.getDescription());
-System.out.println(product.getName());
-System.out.println(product.getPrice());
-System.out.println(product.getSupplier_id());
-System.out.println(product.getId());
 
 		Category category = categoryDAO.getByName(product.getCategory().getName());
 		categoryDAO.saveorUpdate(category);  // why to save??
 
 		Supplier supplier = supplierDAO.getByName(product.getSupplier().getName());
 		supplierDAO.saveorUpdate(supplier); // Why to save??
-		
-		
 		
 		
 		
@@ -104,8 +95,8 @@ System.out.println(product.getId());
 	public String getSelectedProduct(@PathVariable("id") String id, Model model,RedirectAttributes redirectAttributes) {
 			System.out.println("getSelectedProduct");
 			redirectAttributes.addFlashAttribute("selectedProduct", productDAO.get(id));
-		//	model.addAttribute("selectedProduct", this.productDAO.get(id));
-		//	model.addAttribute("categoryList", this.categoryDAO.list());
+		//model.addAttribute("selectedProduct", this.productDAO.get(id));
+			//model.addAttribute("categoryList", this.categoryDAO.list());
 		//	return "list";	
 			return "redirect:/backToHome";
 	}

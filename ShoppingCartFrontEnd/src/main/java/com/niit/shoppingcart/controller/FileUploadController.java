@@ -11,17 +11,27 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+/**
+ * Handles requests  for the application file upload requests
+ */  
 @Controller
 public class FileUploadController {
 
 	/**
 	 * Upload single file using Spring Controller
 	 */
+	 @RequestMapping("/uploading")
+		public String toupload()
+		{
+		return "upload";	
+		}
+	 
+	 
 	@RequestMapping(value = "/uploadFile", method = RequestMethod.POST)
 	public @ResponseBody String handleFileUpload(
             @RequestParam("file") MultipartFile file){
         String name = file.getOriginalFilename();
-       String path = "D:\\shoppingcart\\img";
+       String path = "R:\\photos ";
         if (!file.isEmpty()) {
             try {
             	
@@ -87,4 +97,3 @@ public class FileUploadController {
 		return message;
 	}
 }
-

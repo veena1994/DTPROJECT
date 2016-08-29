@@ -1,4 +1,4 @@
-package com.niit.test;
+/*package com.niit.test;
 
 import java.util.List;
 
@@ -26,13 +26,13 @@ AnnotationConfigApplicationContext context = new AnnotationConfigApplicationCont
 		context.refresh();
 		
 		CategoryDAO categoryDAO = (CategoryDAO) context.getBean("categoryDAO");
-	/*	
+		
 		Category c = new Category();
 		c.setId("MOB_001");
 		c.setName("Mobile");
 		c.setDescription("mobile product");
 		categoryDAO.saveOrUpdate(c);
-*/
+
 		List<Category> list =  categoryDAO.list();
 		
 		display(list);
@@ -41,3 +41,4 @@ AnnotationConfigApplicationContext context = new AnnotationConfigApplicationCont
 	
 
 }
+*/

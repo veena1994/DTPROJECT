@@ -38,7 +38,7 @@ public class CartDAOImpl implements CartDAO {
 		sessionFactory.getCurrentSession().saveOrUpdate(cart);
 	}
 
-	@Transactional
+	/*@Transactional
 	public String delete(String id) {
 		Cart cart = new Cart();
 		cart.setUserID(id);
@@ -50,11 +50,17 @@ public class CartDAOImpl implements CartDAO {
 
 		}
 		return null;
+	}*/
+	
+	@Transactional
+	public void delete(int id) {
+		Cart CartToDelete = new Cart();
+		CartToDelete.setId(id);
+		sessionFactory.getCurrentSession().delete(CartToDelete);
 	}
-
 	@Transactional
 	public Cart get(String id) {
-		String hql = "from Cart where userID=" + "'" + id + "'  and status = " + "'N'";
+		String hql = "from Cart where userID=" + "'" + id + "'  and status = " + "O";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 
 		@SuppressWarnings("unchecked")
@@ -78,4 +84,13 @@ public class CartDAOImpl implements CartDAO {
 
 	}
 
+	public String delete(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
+
+
+
+	

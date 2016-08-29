@@ -17,9 +17,9 @@ public class SupplierTest {
 		
 		SupplierDAO supplierDAO=(SupplierDAO)context.getBean("supplierDAO");
 		Supplier  supplier = (Supplier)context.getBean("supplier");
-		supplier.setId("123gt");
-		supplier.setName("binhgf");
-		supplier.setAddress("goojhgjl");
+		supplier.setId("s_2222");
+		supplier.setName("sham");
+		supplier.setAddress("srinagar");
 	    
 		supplierDAO.saveorUpdate(supplier);
 		

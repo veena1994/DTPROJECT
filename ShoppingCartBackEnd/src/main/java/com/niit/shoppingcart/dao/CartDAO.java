@@ -12,7 +12,7 @@ public interface CartDAO {
 	public Cart get(String id);
 	public void saveOrUpdate(Cart Cart);
 
-	public String delete(String id);
+	public void delete(int id);
 	
 	public int getTotalAmount(String id);
 

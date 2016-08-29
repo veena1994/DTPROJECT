@@ -17,6 +17,15 @@ public class UserDetails {
 	private String id;
 	
 	private String name;
+	private String password;
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 	public String getId() {
 		return id;
@@ -65,4 +74,8 @@ public class UserDetails {
 	
 	@Column(name = "contact_number")
 	private String contactNumber;
+	
+	
+	
+	
 }

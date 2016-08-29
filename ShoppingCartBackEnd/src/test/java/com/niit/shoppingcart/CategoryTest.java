@@ -17,9 +17,9 @@ public class CategoryTest {
 		
 		CategoryDAO categoryDAO=(CategoryDAO)context.getBean("categoryDAO");
 		Category  category = (Category)context.getBean("category");
-		category.setId("456456");
-		category.setName("ram");
-		category.setDescription("good");
+		category.setId("c_2222");
+		category.setName("dimond");
+		category.setDescription("rubby");
 	    
 		/*categoryDAO.delete("12f");*/
 		categoryDAO.saveorUpdate(category);

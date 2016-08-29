@@ -1,4 +1,4 @@
-package com.niit.shoppingcart.config;
+ package com.niit.shoppingcart.config;
 
 import java.util.Properties;
 
@@ -22,6 +22,7 @@ import com.niit.shoppingcart.model.Product;
 import com.niit.shoppingcart.model.Supplier;
 import com.niit.shoppingcart.model.User;
 import com.niit.shoppingcart.model.UserDetails;
+import com.niit.shoppingcart.model.shipping;
 
 
 
@@ -64,8 +65,8 @@ public class ApplicationContextConfig {
 		sessionBuilder.addAnnotatedClass(Product.class);
 		sessionBuilder.addAnnotatedClass(User.class);
 		sessionBuilder.addAnnotatedClass(UserDetails.class);
-		/*sessionBuilder.addAnnotatedClass(Cart.class);
-		sessionBuilder.addAnnotatedClass(Account.class);*/
+		sessionBuilder.addAnnotatedClass(Cart.class);
+		sessionBuilder.addAnnotatedClass(shipping.class);
 		return sessionBuilder.buildSessionFactory();
 		
 	

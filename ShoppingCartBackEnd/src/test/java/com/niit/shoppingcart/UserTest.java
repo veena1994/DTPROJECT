@@ -1,12 +1,9 @@
 package com.niit.shoppingcart;
 
-import java.util.List;
-
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 
 import com.niit.shoppingcart.dao.UserDAO;
-import com.niit.shoppingcart.model.Category;
 import com.niit.shoppingcart.model.User;
 
 public class UserTest {
@@ -31,6 +28,7 @@ static AnnotationConfigApplicationContext context;
 	
 	
 
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		
 		UserTest t = new UserTest();

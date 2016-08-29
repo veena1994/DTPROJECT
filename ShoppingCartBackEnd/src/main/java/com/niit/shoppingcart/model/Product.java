@@ -7,19 +7,23 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
+import org.apache.tomcat.util.http.fileupload.MultipartStream;
 import org.springframework.stereotype.Component;
 
 @Entity
-@Table(name="PRODUCT")
+@Table(name = "product")
 @Component
-public class Product
-{
+public class Product {
+
+
+
 	@Id
 	private String  id;
 	private String name;
 	private String description;
-	private String price;
+	private double price;
 	private String category_id;
 	public String getCategory_id() {
 		return category_id;
@@ -75,13 +79,22 @@ public class Product
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getPrice() {
+	public double getPrice() {
 		return price;
 	}
-	public void setPrice(String price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 	
+	@Transient
+	private MultipartStream profilepicture;
 	
+	
+	public MultipartStream getProfilepicture() {
+		return profilepicture;
+	}
+	public void setProfilepicture(MultipartStream profilepicture) {
+		this.profilepicture = profilepicture;
+	}
 
 }

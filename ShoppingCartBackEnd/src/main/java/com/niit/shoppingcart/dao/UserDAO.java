@@ -9,17 +9,15 @@ import com.niit.shoppingcart.model.UserDetails;
 
 public interface UserDAO {
 	
-	public List<UserDetails> list();
+	public User get(String id);
 
-	public UserDetails get(String id);
-
-	//public void saveOrUpdate(User user);
-	
 	public void saveOrUpdate(User user);
+	
+	
 
 	public void delete(String id);
 	
-	public boolean isValidUser(String id, String password, boolean isAdmin);
+	public boolean isValidUser(String id, String name, boolean isAdmin);
 	public boolean isAdmin(String name);
 
 

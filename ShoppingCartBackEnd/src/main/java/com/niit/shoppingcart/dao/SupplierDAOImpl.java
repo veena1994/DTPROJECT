@@ -4,8 +4,6 @@ package com.niit.shoppingcart.dao;
 
 import java.util.List;
 
-
-
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -38,7 +36,7 @@ public class SupplierDAOImpl  implements SupplierDAO{
 
 	@Transactional
 	public Supplier get(String id){
-		String hql="from category where id="+"'"+id+"'";
+		String hql = "from Supplier where id=" +"'"+ id +"'";
 		Query query=(Query)sessionFactory.getCurrentSession().createQuery(hql);
 		List<Supplier> listSupplier=(List<Supplier>)query.list();
 
@@ -59,9 +57,6 @@ public class SupplierDAOImpl  implements SupplierDAO{
 		sessionFactory.getCurrentSession().saveOrUpdate(supplier);
 		
 	}
-
-
-
 
 	public Supplier getByName(String name) {
 		String hql = "from Supplier where name=" + "'"+ name+"'";
