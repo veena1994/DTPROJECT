@@ -14,7 +14,9 @@ background: url ('E:\eclipse workspace\FirstWebApp\WebContent\first.gif');
      } 
 </style>
 <body>
-<b>SUCCESSFUL</b><br>
-<input type="submit" value="OK">
+<b>REGISTRATION SUCCESSFUL</b><br>
+NAME<input type="text" size="20"><br>
+PASSWORD<input type="password" size="20" ><br>
+<input type="submit" value="OK">&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="clear"> 
 </body>
 </html>

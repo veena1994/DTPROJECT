@@ -14,6 +14,7 @@ background: url ('E:\eclipse workspace\FirstWebApp\WebContent\first.gif');
      } 
 </style>
 <body>
+<form action="" method="post"></form>
 <b>UN-SUCCESSFUL</b><br>
 <input type="submit" value="BACK">
 </body>
