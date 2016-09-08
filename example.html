@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script  src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+</head>
+<body data-ng-app="" ng-init="product=[{id:'12f31a',name:'tea',cost:25},
+{id:'12f31',name:'coffee',cost:20},{id:'12f3',name:'greentea',cost:50}]">
+<table border="1">
+<thead>
+<tr>
+<td>product Id</td>
+<td>product Name</td>
+<td>product cost</td>
+</tr>
+</thead>
+
+<tr  ng-repeat="p in product">
+
+   <td>{{p.id}}</td>
+   <td>{{p.name}}</td>
+   <td>{{p.cost}}</td>
+</tr>
+</table >
+
+
+
+</body>
+</html>
