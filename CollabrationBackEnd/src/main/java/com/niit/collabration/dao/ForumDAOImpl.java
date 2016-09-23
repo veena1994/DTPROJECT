@@ -46,7 +46,7 @@ public class ForumDAOImpl implements ForumDAO{
 	}
 	@Transactional
 	public Forum get(String Id) {
-		String hql = "from FORUM1 where Id=" + Id ;
+		String hql = "from FORUM where Id=" + Id ;
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		
 		@SuppressWarnings("unchecked")

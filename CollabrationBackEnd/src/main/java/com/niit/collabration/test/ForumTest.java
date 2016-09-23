@@ -23,6 +23,7 @@ public class ForumTest {
 		ForumDAO forumDAO = (ForumDAO)context.getBean("forumDAO");
 		
 		forum1.setId("1546_hy");
+		forum1.setUsr("XYZ");
 		forum1.setContent("IT JOB ONLY");
 		forum1.setCategory("New Category");
 		forum1.setTitle("JOB");

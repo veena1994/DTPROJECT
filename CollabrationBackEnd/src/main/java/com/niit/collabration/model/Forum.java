@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import org.springframework.stereotype.Component;
 
 @Entity
-@Table(name = "FORUM1")
+@Table(name = "FORUM")
 @Component
 public class Forum {
 	
@@ -17,10 +17,17 @@ public class Forum {
 	private String Id;
 	private String Title;
     private String Content;
-   
+   private String Usr;
     private Date Date;
 	private String Category;
 	
+	
+	public String getUsr() {
+		return Usr;
+	}
+	public void setUsr(String usr) {
+		Usr = usr;
+	}
 	public String getId() {
 		return Id;
 	}

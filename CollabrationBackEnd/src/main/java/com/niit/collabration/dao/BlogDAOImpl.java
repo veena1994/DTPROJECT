@@ -25,7 +25,7 @@ public class BlogDAOImpl  implements BlogDAO{
 
 	@Transactional
 	public List<Blog> list() {
-		
+		System.out.println("list it");
 		@SuppressWarnings("unchecked")
 		List<Blog> listBlog = (List<Blog>) 
 		          sessionFactory.getCurrentSession()
