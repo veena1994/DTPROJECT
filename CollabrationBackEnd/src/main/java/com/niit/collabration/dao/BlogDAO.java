@@ -8,9 +8,10 @@ public interface BlogDAO {
 
 	public List<Blog> list();
 
-	public Blog get(String Id);
+	public Blog get(int Id);
 	
 	public void saveOrUpdate(Blog blog);
 
-	public void delete(String Id);
-}
+	public void delete(int Id);
+
+	}

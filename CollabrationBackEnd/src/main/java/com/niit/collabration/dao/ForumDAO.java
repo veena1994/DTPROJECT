@@ -10,10 +10,10 @@ public interface ForumDAO {
 
 	public List<Forum> list();
 
-	public Forum get(String Id);
+	public Forum get(int Id);
 	
 	public void saveOrUpdate(Forum forum);
 
-	public void delete(String Id);
+	public void delete(int Id);
 
 }

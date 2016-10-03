@@ -39,15 +39,15 @@ public class BlogDAOImpl  implements BlogDAO{
 		sessionFactory.getCurrentSession().saveOrUpdate(blog);
 	}
 	@Transactional
-	public void delete(String Id) {
+	public void delete(int Id) {
 		Blog BlogToDelete = new Blog();
 		BlogToDelete.setId(Id);
 	
 		sessionFactory.getCurrentSession().delete(BlogToDelete);
 	}
 	@Transactional
-	public Blog get(String Id) {
-		String hql = "from BLOG where Id=" + Id ;
+	public Blog get(int Id) {
+		String hql = "from BLOG1 where Id=" + Id ;
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		
 		@SuppressWarnings("unchecked")
@@ -60,4 +60,6 @@ public class BlogDAOImpl  implements BlogDAO{
 		return null;
 	}
 
+
+	
 }

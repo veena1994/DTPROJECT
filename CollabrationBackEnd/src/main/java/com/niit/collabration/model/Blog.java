@@ -2,9 +2,9 @@ package com.niit.collabration.model;
 
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Table;
 import javax.persistence.Id;
 
@@ -12,25 +12,24 @@ import javax.persistence.Id;
 import org.springframework.stereotype.Component;
 
 @Entity
-@Table(name = "BLOG")
+@Table(name = "BLOG1")
 @Component
 public class Blog {
 
 	@Id
 	
-	@Column(name="BLOGID")
-	private String Id;
+	@GeneratedValue
+	private int Id;
 	private Date BlogDate;
 	private String UserId;
 	private String BlogName;
 	private String Contents;
-	private char Status;
-	private String Reason;
 	
-	public String getId() {
+	
+	public int getId() {
 		return Id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		Id = id;
 	}
 	public Date getBlogDate() {
@@ -57,17 +56,6 @@ public class Blog {
 	public void setContents(String contents) {
 		Contents = contents;
 	}
-	public char getStatus() {
-		return Status;
-	}
-	public void setStatus(char status) {
-		Status = status;
-	}
-	public String getReason() {
-		return Reason;
-	}
-	public void setReason(String reason) {
-		Reason = reason;
-	}
+	
 
 }

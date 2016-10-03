@@ -3,6 +3,7 @@ package com.niit.collabration.model;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Component;
 public class Event {
 	
 	@Id
+	@GeneratedValue
 	public String Id;
 	public String Name;
 	public Date EventDate;

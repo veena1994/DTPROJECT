@@ -23,7 +23,7 @@ public class UserTest {
 	user.setEmail("RANI@gmail.com");
 	user.setPhone("9989557955");
 	user.setYearOfJoin(2011);
-	user.setStatus('A');
+	
 	user.setRollNo("12F323");
 	userDAO.saveOrUpdate(user);
 	
@@ -35,7 +35,7 @@ public class UserTest {
 	u1.setEmail("RAMA@gmail.com");
 	u1.setPhone("9908948761");
 	u1.setYearOfJoin(2012);
-	u1.setStatus('N');
+	
 	u1.setRollNo("12F324");
 	userDAO.saveOrUpdate(user);
 	

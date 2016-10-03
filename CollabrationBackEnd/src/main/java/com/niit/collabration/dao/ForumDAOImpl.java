@@ -38,14 +38,14 @@ public class ForumDAOImpl implements ForumDAO{
 		sessionFactory.getCurrentSession().saveOrUpdate(forum);
 	}
 	@Transactional
-	public void delete(String Id) {
+	public void delete(int Id) {
 		Forum ForumToDelete = new Forum();
 		ForumToDelete.setId(Id);
 	
 		sessionFactory.getCurrentSession().delete(ForumToDelete);
 	}
 	@Transactional
-	public Forum get(String Id) {
+	public Forum get(int Id) {
 		String hql = "from FORUM where Id=" + Id ;
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		

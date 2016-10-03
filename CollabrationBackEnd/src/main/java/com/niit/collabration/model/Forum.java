@@ -1,7 +1,10 @@
 package com.niit.collabration.model;
 import java.util.Date;
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -13,8 +16,9 @@ import org.springframework.stereotype.Component;
 public class Forum {
 	
 	@Id
+	@GeneratedValue
 	@Column(name="Id")
-	private String Id;
+	private int Id;
 	private String Title;
     private String Content;
    private String Usr;
@@ -28,10 +32,10 @@ public class Forum {
 	public void setUsr(String usr) {
 		Usr = usr;
 	}
-	public String getId() {
+	public int getId() {
 		return Id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		Id = id;
 	}
 

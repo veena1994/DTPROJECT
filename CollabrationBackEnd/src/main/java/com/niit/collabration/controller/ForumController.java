@@ -43,7 +43,7 @@ public class ForumController {
 	}
 	
 	@GetMapping("/forum/{Id}")
-	public ResponseEntity<Forum> getForums(@PathVariable("Id")String Id){
+	public ResponseEntity<Forum> getForums(@PathVariable("Id")int Id){
 		//logger.debug("calling method getBLogs with the Id" +Id);
 		forum = forumDAO.get(Id);
 		if(forum==null){
@@ -63,7 +63,7 @@ public class ForumController {
 	
 	
     @DeleteMapping("/forum/{Id}")
-    public ResponseEntity<Forum> deleteForum(@PathVariable String Id){
+    public ResponseEntity<Forum> deleteForum(@PathVariable int Id){
     //logger.debug("calling method deleteBlog with the Id"+Id);
     
     if(forumDAO.get(Id)!=null){
@@ -74,7 +74,7 @@ public class ForumController {
     }
     
    @PutMapping("/forum/{Id}")
-   public ResponseEntity<Forum> updateForum(@PathVariable String Id,@RequestBody Forum forum)
+   public ResponseEntity<Forum> updateForum(@PathVariable int Id,@RequestBody Forum forum)
    {
    //logger.debug("calling method updateBlog with the Id"+Id);
    if(forumDAO.get(Id)==null){

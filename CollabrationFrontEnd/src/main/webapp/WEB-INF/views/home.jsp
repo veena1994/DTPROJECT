@@ -19,7 +19,7 @@
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="index.html">Landed</a></h1>
+					<h1 id="logo"><a href="index.html">AIMS</a></h1>
 					<nav id="nav">
 						<ul>
 							<li><a href="index.html">HOME</a></li>
@@ -38,9 +38,8 @@
 				<section id="banner">
 					<div class="content">
 						<header>
-							<h2>The future has landed</h2>
-							<p>And there are no hoverboards or flying cars.<br />
-							Just apps. Lots of mother flipping apps.</p>
+							<h2>AIMS COLLABRATION PORTAL</h2>
+							
 						</header>
 						<span class="image"><img src="<c:url value="/resources/images/pic01.jpg"/>"  /></span>
 					</div>
@@ -159,7 +158,9 @@
 						</footer>
 					</div>
 				</section>
-
+<div class="maps">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.0010006376765!2d77.51644631430538!3d13.035607990813972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d20e0835c09%3A0xb57bc71b6fa453b2!2sAIMS+Institutes!5e0!3m2!1sen!2sin!4v1475222616422" width="1270" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
 			<!-- Five -->
 				<section id="five" class="wrapper style2 special fade">
 					<div class="container">

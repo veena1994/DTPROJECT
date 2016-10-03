@@ -19,7 +19,7 @@ public class User1 {
 	private String Password;
 	private String Email;
 	private String Phone;
-	private char Status;
+	
 	private int YearOfJoin;
 	private String RollNo;
 	
@@ -53,12 +53,7 @@ public class User1 {
 	public void setPhone(String phone) {
 		Phone = phone;
 	}
-	public char getStatus() {
-		return Status;
-	}
-	public void setStatus(char status) {
-		Status = status;
-	}
+	
 	public int getYearOfJoin() {
 		return YearOfJoin;
 	}

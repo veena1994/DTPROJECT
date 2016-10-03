@@ -20,15 +20,15 @@ public class ForumTest {
 		Forum forum1 =(Forum)context.getBean("forum");
 		
 		
-		ForumDAO forumDAO = (ForumDAO)context.getBean("forumDAO");
+		//ForumDAO forumDAO = (ForumDAO)context.getBean("forumDAO");
 		
-		forum1.setId("1546_hy");
-		forum1.setUsr("XYZ");
-		forum1.setContent("IT JOB ONLY");
-		forum1.setCategory("New Category");
-		forum1.setTitle("JOB");
-		forum1.setDate(new Date());
 		
-		forumDAO.saveOrUpdate(forum1);
+//		forum1.setUsr("XYZ");
+//		forum1.setContent("IT JOB ONLY");
+//		forum1.setCategory("New Category");
+//		forum1.setTitle("JOB");
+//		forum1.setDate(new Date());
+//		
+//		forumDAO.saveOrUpdate(forum1);
 	}
 }
